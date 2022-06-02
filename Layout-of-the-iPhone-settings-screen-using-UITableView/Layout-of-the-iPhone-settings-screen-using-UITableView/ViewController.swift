@@ -20,10 +20,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         table.register(SettingSomeInfoOption.self,
                        forCellReuseIdentifier: SettingSomeInfoOption.identifire)
         
+        table.register(SettingTableFigure.self,
+                       forCellReuseIdentifier: SettingTableFigure.identifire)
+        
         table.register(UITableViewCell.self,
                        forCellReuseIdentifier: "reuseIdentifier")
 
-        
         return table
     }()
     
@@ -100,6 +102,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         ]))
         
         models.append(Section(option: [
+            .notificationCell(model: SettingNotification(title: CellTitle.sectionThreeCellOne.rawValue,
+                                                         icon: UIImage(systemName: Image.sectionThreeCellOne.rawValue),
+                                                         iconBackgroungColor: Color.sixColor,
+                                                         titleInfo: "1")
+                                                         { print("Нажата ячейка \($0)") } ),
+            
             .staticCell(model:SettingsOption(title: CellTitle.sectionThreeCellTwo.rawValue,
                                              icon: UIImage(systemName: Image.sectionThreeCellTwo.rawValue),
                                              iconBackgroungColor: .systemGray)
@@ -158,8 +166,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             cell.configure(with: model)
             return cell
             
-        case .notificationCell(model: let model):
-            <#code#>
+        case .notificationCell(let model):
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: SettingTableFigure.identifire,
+                                                           for: indexPath) as? SettingTableFigure
+            else { return UITableViewCell() }
+            cell.configure(with: model)
+            return cell
         }
     }
      
@@ -180,8 +192,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             let doubleHeader = model.title
             model.handler(doubleHeader)
             
-        case .notificationCell(model: let model):
-            <#code#>
+        case .notificationCell(let model):
+            let doubleHeader = model.title
+            model.handler(doubleHeader)
         }
     }
 }
