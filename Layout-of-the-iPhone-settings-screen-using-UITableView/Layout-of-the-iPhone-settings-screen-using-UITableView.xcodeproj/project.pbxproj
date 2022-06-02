@@ -16,6 +16,7 @@
 		406EE19B2848915600A57287 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406EE19A2848915600A57287 /* Extension.swift */; };
 		406EE19E284893ED00A57287 /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406EE19D284893ED00A57287 /* SettingTableViewCell.swift */; };
 		406EE1A0284895ED00A57287 /* SwitchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406EE19F284895ED00A57287 /* SwitchTableViewCell.swift */; };
+		406EE1A2284896AE00A57287 /* SettingSomeInfoOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406EE1A1284896AE00A57287 /* SettingSomeInfoOption.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		406EE19A2848915600A57287 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		406EE19D284893ED00A57287 /* SettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewCell.swift; sourceTree = "<group>"; };
 		406EE19F284895ED00A57287 /* SwitchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchTableViewCell.swift; sourceTree = "<group>"; };
+		406EE1A1284896AE00A57287 /* SettingSomeInfoOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingSomeInfoOption.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 			children = (
 				406EE19D284893ED00A57287 /* SettingTableViewCell.swift */,
 				406EE19F284895ED00A57287 /* SwitchTableViewCell.swift */,
+				406EE1A1284896AE00A57287 /* SettingSomeInfoOption.swift */,
 			);
 			path = SettingsCell;
 			sourceTree = "<group>";
@@ -156,6 +159,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				406EE18B28488F9D00A57287 /* ViewController.swift in Sources */,
+				406EE1A2284896AE00A57287 /* SettingSomeInfoOption.swift in Sources */,
 				406EE19E284893ED00A57287 /* SettingTableViewCell.swift in Sources */,
 				406EE18728488F9D00A57287 /* AppDelegate.swift in Sources */,
 				406EE18928488F9D00A57287 /* SceneDelegate.swift in Sources */,

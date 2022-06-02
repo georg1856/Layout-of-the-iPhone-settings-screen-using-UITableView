@@ -14,8 +14,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         table.register(SettingTableViewCell.self,
                        forCellReuseIdentifier: SettingTableViewCell.identifire)
         
+        table.register(SwitchTableViewCell.self,
+                       forCellReuseIdentifier: SwitchTableViewCell.identifire)
+        
+        table.register(SettingSomeInfoOption.self,
+                       forCellReuseIdentifier: SettingSomeInfoOption.identifire)
+        
         table.register(UITableViewCell.self,
                        forCellReuseIdentifier: "reuseIdentifier")
+
         
         return table
     }()
@@ -40,6 +47,18 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                                                     iconBackgroungColor: Color.firstColor,
                                                     isOn: false)
                                                     { print("Нажата ячейка \($0)") } ),
+            
+            .someInfoCell(model: SettingInfo(title: CellTitle.sectionOneCellTwo.rawValue,
+                                             icon: UIImage(systemName: Image.sectionOneCellTwo.rawValue),
+                                             iconBackgroungColor: Color.secondColor,
+                                             titleInfo: "Не подключено")
+                                             { print("Нажата ячейка \($0)") }),
+            
+            .someInfoCell(model: SettingInfo(title: CellTitle.sectionOneCellThree.rawValue,
+                                             icon: UIImage(named: Image.sectionOneCellThree.rawValue),
+                                             iconBackgroungColor: Color.secondColor,
+                                             titleInfo: "Вкл.")
+                                             { print("Нажата ячейка \($0)") }),
             
             .staticCell(model: SettingsOption(title: CellTitle.sectionOneCellFour.rawValue,
                                              icon: UIImage(systemName: Image.sectionOneCellFour.rawValue),
@@ -132,8 +151,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             cell.configure(with: model)
             return cell
             
-        case .someInfoCell(model: let model):
-            <#code#>
+        case .someInfoCell(let model):
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: SettingSomeInfoOption.identifire,
+                                                           for: indexPath) as? SettingSomeInfoOption
+            else { return UITableViewCell() }
+            cell.configure(with: model)
+            return cell
+            
         case .notificationCell(model: let model):
             <#code#>
         }
@@ -152,8 +176,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             let doubleHeader = model.title
             model.handler(doubleHeader)
             
-        case .someInfoCell(model: let model):
-            <#code#>
+        case .someInfoCell(let model):
+            let doubleHeader = model.title
+            model.handler(doubleHeader)
+            
         case .notificationCell(model: let model):
             <#code#>
         }
