@@ -35,6 +35,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func configure() {
         models.append(Section(option: [
+            .switchCell(model: SettingsSwitchOption(title: CellTitle.sectionOneCellOne.rawValue,
+                                                    icon: UIImage(systemName: Image.sectionOneCellOne.rawValue),
+                                                    iconBackgroungColor: Color.firstColor,
+                                                    isOn: false)
+                                                    { print("Нажата ячейка \($0)") } ),
+            
             .staticCell(model: SettingsOption(title: CellTitle.sectionOneCellFour.rawValue,
                                              icon: UIImage(systemName: Image.sectionOneCellFour.rawValue),
                                              iconBackgroungColor: Color.thirdColor)
@@ -43,7 +49,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             .staticCell(model: SettingsOption(title: CellTitle.sectionOneCellFive.rawValue, icon:
                                               UIImage(systemName: Image.sectionOneCellFive.rawValue),
                                               iconBackgroungColor: Color.thirdColor)
-                                              { print("Нажата ячейка \($0)") })
+                                              { print("Нажата ячейка \($0)") }),
+            
+            .switchCell(model: SettingsSwitchOption(title: CellTitle.sectionOneCellSix.rawValue,
+                                                    icon: UIImage(named: Image.sectionOneCellSix.rawValue),
+                                                    iconBackgroungColor: Color.fourColor,
+                                                    isOn: false)
+                                                    { print("Нажата ячейка \($0)") })
         ]))
         
         models.append(Section(option: [
@@ -113,8 +125,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             cell.configure(with: model)
             return cell
             
-        case .switchCell(model: let model):
-            <#code#>
+        case .switchCell(let model):
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: SwitchTableViewCell.identifire,
+                                                           for: indexPath) as? SwitchTableViewCell
+            else { return UITableViewCell() }
+            cell.configure(with: model)
+            return cell
+            
         case .someInfoCell(model: let model):
             <#code#>
         case .notificationCell(model: let model):
@@ -130,8 +147,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         case .staticCell(let model):
             let doubleHeader = model.title
             model.handler(doubleHeader)
-        case .switchCell(model: let model):
-            <#code#>
+            
+        case .switchCell(let model):
+            let doubleHeader = model.title
+            model.handler(doubleHeader)
+            
         case .someInfoCell(model: let model):
             <#code#>
         case .notificationCell(model: let model):
