@@ -14,6 +14,7 @@
 		406EE19028488F9E00A57287 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 406EE18F28488F9E00A57287 /* Assets.xcassets */; };
 		406EE19328488F9E00A57287 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 406EE19128488F9E00A57287 /* LaunchScreen.storyboard */; };
 		406EE19B2848915600A57287 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406EE19A2848915600A57287 /* Extension.swift */; };
+		406EE19E284893ED00A57287 /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406EE19D284893ED00A57287 /* SettingTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		406EE19228488F9E00A57287 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		406EE19428488F9E00A57287 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		406EE19A2848915600A57287 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		406EE19D284893ED00A57287 /* SettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 		406EE18528488F9D00A57287 /* Layout-of-the-iPhone-settings-screen-using-UITableView */ = {
 			isa = PBXGroup;
 			children = (
+				406EE19C284893DB00A57287 /* SettingsCell */,
 				406EE18628488F9D00A57287 /* AppDelegate.swift */,
 				406EE18828488F9D00A57287 /* SceneDelegate.swift */,
 				406EE18A28488F9D00A57287 /* ViewController.swift */,
@@ -68,6 +71,14 @@
 				406EE19428488F9E00A57287 /* Info.plist */,
 			);
 			path = "Layout-of-the-iPhone-settings-screen-using-UITableView";
+			sourceTree = "<group>";
+		};
+		406EE19C284893DB00A57287 /* SettingsCell */ = {
+			isa = PBXGroup;
+			children = (
+				406EE19D284893ED00A57287 /* SettingTableViewCell.swift */,
+			);
+			path = SettingsCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,6 +153,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				406EE18B28488F9D00A57287 /* ViewController.swift in Sources */,
+				406EE19E284893ED00A57287 /* SettingTableViewCell.swift in Sources */,
 				406EE18728488F9D00A57287 /* AppDelegate.swift in Sources */,
 				406EE18928488F9D00A57287 /* SceneDelegate.swift in Sources */,
 				406EE19B2848915600A57287 /* Extension.swift in Sources */,
