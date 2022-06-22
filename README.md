@@ -1,4 +1,3 @@
 # Layout-of-the-iPhone-settings-screen-using-UITableView
 
-![Screen](https://github.com/georg1856/Layout-of-the-iPhone-settings-screen-using-UITableView/blob/Develop/Image.jpg)
-
+<img src="https://github.com/georg1856/Layout-of-the-iPhone-settings-screen-using-UITableView/blob/Develop/Image.jpg" width="200">
