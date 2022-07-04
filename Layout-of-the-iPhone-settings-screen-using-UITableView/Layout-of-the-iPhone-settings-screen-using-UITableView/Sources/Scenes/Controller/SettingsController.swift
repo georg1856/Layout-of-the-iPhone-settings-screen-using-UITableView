@@ -22,10 +22,13 @@ class SettingsController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view = SettingsView()
         model = SettingsModel()
 
         configureView()
+    }
+    
+    override func loadView() {
+        view = SettingsView()
     }
 }
 
