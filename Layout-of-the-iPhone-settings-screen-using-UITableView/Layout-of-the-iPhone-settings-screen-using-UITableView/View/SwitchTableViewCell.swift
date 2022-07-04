@@ -83,6 +83,8 @@ class SwitchTableViewCell: UITableViewCell {
         )
     }
     
+    // MARK: - Configuration
+
     public func configure(with model: SettingsSwitchOption){
         label.text = model.title
         iconImageView.image = model.icon

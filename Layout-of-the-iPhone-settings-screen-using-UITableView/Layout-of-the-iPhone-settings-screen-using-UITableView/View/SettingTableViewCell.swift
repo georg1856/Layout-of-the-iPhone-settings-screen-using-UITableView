@@ -1,5 +1,5 @@
 //
-//  SettingSomeInfoOption.swift
+//  SettingTableViewCell.swift
 //  Layout-of-the-iPhone-settings-screen-using-UITableView
 //
 //  Created by Georgiy on 02.06.2022.
@@ -8,9 +8,11 @@
 import Foundation
 import UIKit
 
-class SettingSomeInfoOption: UITableViewCell {
+class SettingTableViewCell: UITableViewCell {
     
-    static let identifire = "SettingSomeInfoOption"
+    static let identifire = "SettingTableViewCell"
+    
+    // MARK: - Views
     
     private let iconContainer: UIView = {
         let view = UIView()
@@ -33,18 +35,11 @@ class SettingSomeInfoOption: UITableViewCell {
         return label
     }()
     
-    private var labelInfo: UILabel = {
-        let labelInfo = UILabel()
-        labelInfo.textColor = Metric.labelInfoTextColor
-        return labelInfo
-    }()
-    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
         contentView.addSubview(label)
         contentView.addSubview(iconContainer)
-        contentView.addSubview(labelInfo)
         iconContainer.addSubview(iconImageView)
         
         contentView.clipsToBounds = true
@@ -63,20 +58,12 @@ class SettingSomeInfoOption: UITableViewCell {
                                      y: Metric.iconContainerFrameY,
                                      width: size,
                                      height: size)
-
         
         let imageSize: CGFloat = size / 1.5
         iconImageView.frame = CGRect(x: (size - imageSize) / 2,
                                      y: (size - imageSize) / 2,
                                      width: imageSize,
                                      height: imageSize)
-         
-        
-        labelInfo.sizeToFit()
-        labelInfo.frame = CGRect(x: contentView.frame.size.width - labelInfo.frame.width - 12,
-                                y: (contentView.frame.size.height - labelInfo.frame.size.height) / 2,
-                                width: labelInfo.frame.size.width,
-                                height: labelInfo.frame.size.height)
         
         label.frame = CGRect(x: Metric.labelFrameX + iconContainer.frame.size.width,
                              y: Metric.labelFrameY,
@@ -84,25 +71,23 @@ class SettingSomeInfoOption: UITableViewCell {
                              height: contentView.frame.size.height)
     }
     
-    public func configure(with model: SettingInfo){
+    // MARK: - Configuration
+    
+    public func configure(with model: SettingsOption){
         label.text = model.title
         iconImageView.image = model.icon
         iconContainer.backgroundColor = model.iconBackgroungColor
-        labelInfo.text = model.titleInfo
     }
 }
 
-extension SettingSomeInfoOption {
-    
+extension SettingTableViewCell {
     enum Metric {
         static var cornerRadius: CGFloat = 8
         static var tintColor = UIColor.white
-        static var labelInfoTextColor = UIColor.gray
         static var numberOfLines = 1
         static var iconContainerFrameX: CGFloat = 12
         static var iconContainerFrameY: CGFloat = 6
         static var labelFrameX: CGFloat = 25
         static var labelFrameY: CGFloat = 0
-        static var mySwitchColor = UIColor.systemGreen
     }
 }
