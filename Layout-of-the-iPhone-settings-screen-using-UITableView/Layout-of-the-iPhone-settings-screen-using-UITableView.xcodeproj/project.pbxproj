@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4067C6E92872F6570000CB77 /* SettingsSections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4067C6E82872F6570000CB77 /* SettingsSections.swift */; };
-		4067C6EB2872F66B0000CB77 /* SettingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4067C6EA2872F66B0000CB77 /* SettingsModel.swift */; };
-		4067C6ED2872F6800000CB77 /* ExtensionSettingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4067C6EC2872F6800000CB77 /* ExtensionSettingsModel.swift */; };
 		406EE18728488F9D00A57287 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406EE18628488F9D00A57287 /* AppDelegate.swift */; };
 		406EE18928488F9D00A57287 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406EE18828488F9D00A57287 /* SceneDelegate.swift */; };
 		406EE18B28488F9D00A57287 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406EE18A28488F9D00A57287 /* ViewController.swift */; };
@@ -24,9 +21,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4067C6E82872F6570000CB77 /* SettingsSections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsSections.swift; sourceTree = "<group>"; };
-		4067C6EA2872F66B0000CB77 /* SettingsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsModel.swift; sourceTree = "<group>"; };
-		4067C6EC2872F6800000CB77 /* ExtensionSettingsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionSettingsModel.swift; sourceTree = "<group>"; };
 		406EE18328488F9D00A57287 /* Layout-of-the-iPhone-settings-screen-using-UITableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Layout-of-the-iPhone-settings-screen-using-UITableView.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		406EE18628488F9D00A57287 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		406EE18828488F9D00A57287 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -53,16 +47,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4067C6E72872F6400000CB77 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				4067C6E82872F6570000CB77 /* SettingsSections.swift */,
-				4067C6EA2872F66B0000CB77 /* SettingsModel.swift */,
-				4067C6EC2872F6800000CB77 /* ExtensionSettingsModel.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		406EE17A28488F9D00A57287 = {
 			isa = PBXGroup;
 			children = (
@@ -82,7 +66,6 @@
 		406EE18528488F9D00A57287 /* Layout-of-the-iPhone-settings-screen-using-UITableView */ = {
 			isa = PBXGroup;
 			children = (
-				4067C6E72872F6400000CB77 /* Model */,
 				406EE19C284893DB00A57287 /* SettingsCell */,
 				406EE18628488F9D00A57287 /* AppDelegate.swift */,
 				406EE18828488F9D00A57287 /* SceneDelegate.swift */,
@@ -184,10 +167,7 @@
 				406EE1A4284897A800A57287 /* SettingTableFigure.swift in Sources */,
 				406EE18728488F9D00A57287 /* AppDelegate.swift in Sources */,
 				406EE18928488F9D00A57287 /* SceneDelegate.swift in Sources */,
-				4067C6ED2872F6800000CB77 /* ExtensionSettingsModel.swift in Sources */,
-				4067C6EB2872F66B0000CB77 /* SettingsModel.swift in Sources */,
 				406EE19B2848915600A57287 /* Extension.swift in Sources */,
-				4067C6E92872F6570000CB77 /* SettingsSections.swift in Sources */,
 				406EE1A0284895ED00A57287 /* SwitchTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
