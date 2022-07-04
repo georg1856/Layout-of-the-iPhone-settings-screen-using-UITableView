@@ -21,6 +21,7 @@
 		40889F1C2872FAF1001298C6 /* SettingsSections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40889F1B2872FAF1001298C6 /* SettingsSections.swift */; };
 		40889F1E2872FB01001298C6 /* SettingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40889F1D2872FB01001298C6 /* SettingsModel.swift */; };
 		40889F202872FB11001298C6 /* ExtensionSettingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40889F1F2872FB11001298C6 /* ExtensionSettingsModel.swift */; };
+		40889F232872FD45001298C6 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40889F222872FD45001298C6 /* SettingsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		40889F1B2872FAF1001298C6 /* SettingsSections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsSections.swift; sourceTree = "<group>"; };
 		40889F1D2872FB01001298C6 /* SettingsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsModel.swift; sourceTree = "<group>"; };
 		40889F1F2872FB11001298C6 /* ExtensionSettingsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionSettingsModel.swift; sourceTree = "<group>"; };
+		40889F222872FD45001298C6 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 		406EE18528488F9D00A57287 /* Layout-of-the-iPhone-settings-screen-using-UITableView */ = {
 			isa = PBXGroup;
 			children = (
+				40889F212872FC73001298C6 /* View */,
 				40889F1A2872FAD6001298C6 /* Model */,
 				406EE19C284893DB00A57287 /* SettingsCell */,
 				406EE18628488F9D00A57287 /* AppDelegate.swift */,
@@ -89,10 +92,6 @@
 		406EE19C284893DB00A57287 /* SettingsCell */ = {
 			isa = PBXGroup;
 			children = (
-				406EE19D284893ED00A57287 /* SettingTableViewCell.swift */,
-				406EE19F284895ED00A57287 /* SwitchTableViewCell.swift */,
-				406EE1A1284896AE00A57287 /* SettingSomeInfoOption.swift */,
-				406EE1A3284897A800A57287 /* SettingTableFigure.swift */,
 			);
 			path = SettingsCell;
 			sourceTree = "<group>";
@@ -105,6 +104,18 @@
 				40889F1F2872FB11001298C6 /* ExtensionSettingsModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		40889F212872FC73001298C6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				406EE19D284893ED00A57287 /* SettingTableViewCell.swift */,
+				406EE1A1284896AE00A57287 /* SettingSomeInfoOption.swift */,
+				406EE1A3284897A800A57287 /* SettingTableFigure.swift */,
+				406EE19F284895ED00A57287 /* SwitchTableViewCell.swift */,
+				40889F222872FD45001298C6 /* SettingsView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,6 +198,7 @@
 				40889F202872FB11001298C6 /* ExtensionSettingsModel.swift in Sources */,
 				40889F1E2872FB01001298C6 /* SettingsModel.swift in Sources */,
 				406EE19B2848915600A57287 /* Extension.swift in Sources */,
+				40889F232872FD45001298C6 /* SettingsView.swift in Sources */,
 				40889F1C2872FAF1001298C6 /* SettingsSections.swift in Sources */,
 				406EE1A0284895ED00A57287 /* SwitchTableViewCell.swift in Sources */,
 			);

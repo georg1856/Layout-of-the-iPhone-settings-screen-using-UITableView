@@ -12,6 +12,8 @@ class SettingTableFigure: UITableViewCell {
     
     static let identifire = "SettingTableFigure"
 
+    // MARK: - Views
+    
     private let iconContainer: UIView = {
         let view = UIView()
         view.clipsToBounds = true
@@ -90,6 +92,8 @@ class SettingTableFigure: UITableViewCell {
                              height: contentView.frame.size.height)
     }
     
+    // MARK: - Configuration
+
     func configure(with model: SettingNotification){
         label.text = model.title
         iconImageView.image = model.icon
